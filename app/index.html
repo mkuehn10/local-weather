@@ -21,11 +21,20 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="container">
+    <div class="container" data-bind="visible: showTemp">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 text-center">
+                <h1 data-bind="text: city"></h1>
             </div>
-            <p data-bind="text: fahrenheit() ? fahrenheitTemp() : celsiusTemp(), click: toggleTemp"></p>
+            <div class="col-xs-12 text-center icon">
+                    <img data-bind="attr: {src: iconURL}">
+            </div>
+            <div class="col-xs-12 text-center">
+                <h2 data-bind="text: description"></h2>
+            </div>
+            <div class="col-xs-12 text-center">
+                <button id="temp" class="btn btn-primary" data-bind="text: fahrenheit() ? fahrenheitTemp() : celsiusTemp(), click: toggleTemp"></button>
+            </div>
 
         </div>
     </div>

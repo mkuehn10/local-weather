@@ -1,6 +1,6 @@
 <!doctype html><html lang=""><head><meta charset="utf-8"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><title>local weather</title><link rel="apple-touch-icon" href="apple-touch-icon.png"><!-- Place favicon.ico in the root directory --><link rel="stylesheet" href="styles/main.css"></head><body><!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--><div class="container"><div class="row"><div class="col-xs-12"></div><p data-bind="text: fahrenheit() ? fahrenheitTemp() : celsiusTemp(), click: toggleTemp"></p></div></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b, o, i, l, e, r) {
+    <![endif]--><div class="container" data-bind="visible: showTemp"><div class="row"><div class="col-xs-12 text-center"><h1 data-bind="text: city"></h1></div><div class="col-xs-12 text-center icon"><img data-bind="attr: {src: iconURL}"></div><div class="col-xs-12 text-center"><h2 data-bind="text: description"></h2></div><div class="col-xs-12 text-center"><button id="temp" class="btn btn-primary" data-bind="text: fahrenheit() ? fahrenheitTemp() : celsiusTemp(), click: toggleTemp"></button></div></div></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
         b[l] || (b[l] =
             function() {

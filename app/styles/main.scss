@@ -13,13 +13,18 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
+  background-color: gray;
+  color: white;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
+  }
+
+  body {
+    font-size: 30px;
   }
 }
